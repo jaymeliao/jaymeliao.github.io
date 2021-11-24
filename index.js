@@ -13,13 +13,13 @@ fs.readFile('./data.json','utf-8',function(err, jsonString){
   }else{
 
       var data = JSON.parse(jsonString);
-      console.log(data["member"][1]["age"])
-      console.log(data["xyz"])
+     // console.log(data["member"][1]["age"])
+     // console.log(data["xyz"])
       //console.log(data["name"])
       data["member"].push(newPerson);
       dataString=JSON.stringify(data);
       console.log(data)
-      console.log(data["member"][2]["name"])
+      //console.log(data["member"][2]["name"])
 
       fs.writeFileSync("./data.json",dataString, function(err){
         if (err){
